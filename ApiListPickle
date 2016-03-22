@@ -1,0 +1,10 @@
+(dp0
+S'matchlist'
+p1
+S'https://na.api.pvp.net//api/lol/na/v2.2/matchlist/by-summoner/{summonerId}'
+p2
+sS'summoner_by_name'
+p3
+S'https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/{summonerNames}\n'
+p4
+s.

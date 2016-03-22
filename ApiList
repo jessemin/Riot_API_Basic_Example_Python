@@ -1,0 +1,2 @@
+summoner_by_name https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/{summonerNames}
+matchlist https://na.api.pvp.net//api/lol/na/v2.2/matchlist/by-summoner/{summonerId}
