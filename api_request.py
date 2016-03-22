@@ -1,5 +1,6 @@
 import requests
 import pickle
+import sys
 
 
 dev_key_filename = "RiotDevKey"
@@ -40,8 +41,11 @@ def get_user_info(summoner_name):
 
 
 def get_matchlist(summoner_name):
-    summoner_id = get_user_info(summoner_name)[summoner_name]["id"]
+    try:
+        summoner_id = get_user_info(summoner_name)[summoner_name]["id"]
+    except KeyError:
+        sys.stderr.write("Such summoner name does not exist.")
+        exit(-1)
     r = requests.get(matchlist_request(summoner_id))
-    print r.text
     return r.json()
 
